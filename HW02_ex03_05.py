@@ -33,17 +33,63 @@
 # (2) Write a function that draws a similar grid with four rows and four columns.
 ################################################################################
 # Write your functions below:
-# Body
+
+def print_horizontal():
+	print "+", "- - - -",
+
+def print_bar():
+	print "|        ",
+
+def build_horizontal(f):
+	f()
+	f()
+	print "+"
+
+def build_four_by_four_horizontals(f):
+	f()
+	f()
+	f()
+	f()
+	print "+"
+
+def build_bars(f):
+	f()
+	f()
+	print "|"
+
+def build_four_by_four_bars(f):
+	f()
+	f()
+	f()
+	f()
+	print "|"
+
+def do_four(f, fun_):
+	f(fun_)
+	f(fun_)
+	f(fun_)
+	f(fun_)
 
 
 
+def two_by_two(f1, f2, f3, f4, f5):
+	f1(f2)
+	f3(f4, f5)
+	f1(f2)
+	f3(f4, f5)
+	f1(f2)
 
 
-
-
-
-
-
+def four_by_four(f1, f2, f3, f4, f5):
+	f1(f2)
+	f3(f4, f5)
+	f1(f2)
+	f3(f4, f5)
+	f1(f2)
+	f3(f4, f5)
+	f1(f2)
+	f3(f4, f5)
+	f1(f2)
 
 
 # Write your functions above:
@@ -54,6 +100,8 @@ def main():
     two_by_two()
     four_by_four()
     """
+    two_by_two(build_horizontal, print_horizontal, do_four, build_bars, print_bar)
+    four_by_four(build_four_by_four_horizontals, print_horizontal, do_four, build_four_by_four_bars, print_bar)
     print("Hello World!")
     
 

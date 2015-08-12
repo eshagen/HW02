@@ -19,12 +19,24 @@
 
 ################################################################################
 # Write your functions below:
-# Body
+
+def check_fermat(a, b, c, n):
+	if ((a ** n) + (b ** n) == (c ** n) and (n > 2)):
+		print "Holy smokes, Fermat was wrong"
+	else:
+		print "No, that doesn't work."
 
 
-
-
-
+def check_fermat_ints():
+	a = raw_input("Enter the 'a' digit\n")
+	a = int(a)
+	b = raw_input("Enter the 'b' digit\n")
+	b = int(b)
+	c = raw_input("Enter the 'c' digit\n")
+	c = int(c)
+	n = raw_input("Enter the 'n' digit\n")
+	n = int(n)
+	check_fermat(a, b, c, n)
 
 
 
@@ -39,9 +51,10 @@ def main():
     check_fermat_ints()
     check_fermat()
     """
+    
     print("Hello World!")
 
-
+    check_fermat_ints()
 
 if __name__ == "__main__":
     main()
